@@ -1,0 +1,42 @@
+.busqueda{
+  background-color: lightgray;
+  display: flex;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+}
+.busqueda-input{
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+.busqueda-button{
+  height: 36px;
+  width: 100px;
+  background-color: white;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.busqueda-button img{
+  height: 30px;
+}
+.busqueda-left-section{
+  display: flex;
+  align-items: center;
+}
+.busqueda-right-section{
+  display: flex;
+  justify-content: space-between;
+}

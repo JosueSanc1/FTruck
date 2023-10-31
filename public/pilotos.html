@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="styles/rutas.css">
+<link rel="stylesheet" href="styles/mapa.css">
+<script type="text/javascript" src="app.js"></script>
+<section class="busqueda">
+  <div class="busqueda-left-section">
+    
+  </div>
+  <div class="busqueda-right-section">
+    <input class="busqueda-input" type="searchbar" placeholder="Busqueda" id="myInput">
+  </div>
+</section>
+<section class="rutas" id="rutas">
+  <div class="ruta-info"><p>Pilotos</p></div>
+  <p>DPI</p>
+  <input class="busqueda-input" type="searchbar" placeholder="DPI" id="dpi">
+  <p>NIT</p>
+  <input class="busqueda-input" type="searchbar" placeholder="NIT" id="nit">
+  <p>Nombre</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Nombre" id="nombre">
+  <p>Apellido</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Apellido" id="apellido">
+  <p>Telefono</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Telefono" id="telefono">
+  <input id="id" style="visibility: hidden;">
+  <div class="left-section">
+    <button class="header-button" id="sucursales" onclick="addPiloto()"><img class="header-icon" src="images/plus-solid.svg">Nuevo</button>
+    <button class="header-button" id="sucursales" onclick="postPiloto('editPiloto')"><img class="header-icon" src="images/pen-solid.svg">Editar</button>
+    <button class="header-button" id="sucursales" onclick="postPiloto('deletePiloto')"><img class="header-icon" src="images/trash-can-solid.svg">Eliminar</button>
+    <button class="header-button" id="sucursales" onclick="populateTable('Pilotos')"><img class="header-icon" src="images/arrows-rotate-solid.svg">Actualizar</button>
+  </div>
+</section>
+<section class="mapa-info">
+  <div class="row flex-grow-1">
+    <div class="col">
+      <div class="table-wrapper">
+        <table id="table" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="dpi" scope="col">DPI</th>
+              <th data-field="nit" scope="col">NIT</th>
+              <th data-field="nombre" scope="col">Nombre</th>
+              <th data-field="apellido" scope="col">Apellido</th>
+              <th data-field="telefono" scope="col">Telefono</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div> 
+    </div>
+  </div>
+</section>

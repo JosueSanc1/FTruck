@@ -1,0 +1,16 @@
+body{
+  background-color: rgba(4,4,4,255);
+}
+img{
+  height: 500px;
+  margin: auto;
+  display: block;
+}
+.login-box{
+  text-align: center;
+  display: block;
+}
+.error{
+  margin-top: 20px;
+  color: red;
+}

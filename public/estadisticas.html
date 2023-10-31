@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="styles/rutas.css">
+<link rel="stylesheet" href="styles/mapa.css">
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="table.js"></script>
+<section class="busqueda">
+  <div class="busqueda-left-section">
+
+  </div>
+  <div class="busqueda-right-section">
+
+  </div>
+</section>
+<section class="rutas" id="rutas">
+  <div class="ruta-info">
+    <p>TOTAL RUTAS POR PILOTO</p>
+    <input class="busqueda-input" type="searchbar" placeholder="Busqueda" id="myInput" onclick="populateStatistics()">
+  </div>
+  <div class="row flex-grow-1">
+    <div class="col">
+      <div class="table-wrapper">
+        <table id="table" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="piloto" scope="col">Piloto</th>
+              <th data-field="total" scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mapa-info">
+  <div class="ruta-info">
+    <p>TOTAL RUTAS POR VEHICULO</p>
+    <input class="busqueda-input" type="searchbar" placeholder="Busqueda" id="myInput2" onclick="populateStatistics()">
+  </div>
+  <div class="row flex-grow-1">
+    <div class="col">
+      <div class="table-wrapper">
+        <table id="table2" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="vehiculo" scope="col">Vehiculo</th>
+              <th data-field="total" scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="myTable2"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

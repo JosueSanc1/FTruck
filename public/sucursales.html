@@ -1,0 +1,58 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+
+<link rel="stylesheet" href="styles/rutas.css">
+<link rel="stylesheet" href="styles/mapa.css">
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="table.js"></script>
+<section class="busqueda">
+  <div class="busqueda-left-section">
+    
+  </div>
+  <div class="busqueda-right-section">
+    <input class="busqueda-input" type="searchbar" placeholder="Busqueda" id="myInput">
+  </div>
+</section>
+<section class="rutas" id="rutas">
+  <div class="ruta-info"><p>Sucursales</p></div>
+  <p>Nombre Sucursal</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Nombre Sucursal" id="nombreSucursal">
+  <p>Direccion</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Direccion" id="direccion">
+  <p>Telefono</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Telefono" id="telefono">
+  <input id="id" style="visibility: hidden;">
+  <div class="left-section">
+    <button class="header-button" id="sucursales" onclick="addSucursal()"><img class="header-icon" src="images/plus-solid.svg">Nuevo</button>
+    <button class="header-button" id="sucursales" onclick="postSucursal('editSucursal')"><img class="header-icon" src="images/pen-solid.svg">Editar</button>
+    <button class="header-button" id="sucursales" onclick="postSucursal('deleteSucursal')"><img class="header-icon" src="images/trash-can-solid.svg">Eliminar</button>
+    <button class="header-button" id="sucursales" onclick="populateTable('Sucursales')"><img class="header-icon" src="images/arrows-rotate-solid.svg">Actualizar</button>
+  </div>
+</section>
+<section class="mapa-info">
+  <div class="row flex-grow-1">
+    <div class="col">
+      <div class="table-wrapper">
+        <table id="table" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="nombreSucursal" scope="col">Nombre Sucursal</th>
+              <th data-field="direccion" scope="col">Direccion</th>
+              <th data-field="telefono" scope="col">Telefono</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

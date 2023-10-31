@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/busqueda.css">
+    <link rel="stylesheet" href="styles/rutas.css">
+    <link rel="stylesheet" href="styles/mapa.css">
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="navegacion.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="table.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <div>
+          <button class="header-button"><img class="header-icon" src="images/route-solid.svg">Rutas</button>
+        </div>
+      </div>
+      <div class="middle-section">
+        <img class="logo" src="images/FTruckREtransparent.png"> 
+      </div>
+      <div class="right-section">
+        <div>
+          <button class="header-button"><img class="header-icon" src="images/question-solid.svg">Ayuda</button>
+        </div>
+        <div>
+          <button class="header-button"><img class="header-icon" src="images/right-from-bracket-solid.svg" onclick="salir()">Salir</button>
+        </div>
+      </div>
+    </header>
+    <section class="mapa-info-piloto">
+      <div id="table-wrapper">
+        <table id="table" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="piloto" scope="col">Piloto</th>
+              <th data-field="vehiculo" scope="col">Vehiculo</th>
+              <th data-field="origen" scope="col">Origen</th>
+              <th data-field="destino" scope="col">Destino</th>
+              <th data-field="fecha" scope="col">Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+      <div id="ruta-info-piloto" class="ruta-info"><p>info</p></div>
+      <div id="map" class="map-piloto"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3SuNbA9as5fZ5XvETNgfZoM1wNJu-acY&callback=renderMap"></script>
+      <script src="app.js"></script>
+      <script>calcRoutePiloto()</script>
+      <script>populateRutas('Rutas')</script>
+    </section>
+  </body>
+</html>

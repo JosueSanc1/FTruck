@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="styles/rutas.css">
+<link rel="stylesheet" href="styles/mapa.css">
+<script type="text/javascript" src="app.js"></script>
+<section class="busqueda">
+  <div class="busqueda-left-section">
+    
+  </div>
+  <div class="busqueda-right-section">
+    <input class="busqueda-input" type="searchbar" placeholder="Busqueda" id="myInput">
+  </div>
+</section>
+<section class="rutas" id="rutas">
+  <div class="ruta-info"><p>Vehiculos</p></div>
+  <p>Placa</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Placa" id="placa">
+  <p>Marca</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Marca" id="marca">
+  <p>Linea</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Linea" id="linea">
+  <p>Modelo</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Modelo" id="modelo">
+  <p>Kilometraje</p>
+  <input class="busqueda-input" type="searchbar" placeholder="Kilometraje" id="kilometraje">
+  <input id="id" style="visibility: hidden;">
+  <div class="left-section">
+    <button class="header-button" id="sucursales" onclick="addVehiculo()"><img class="header-icon" src="images/plus-solid.svg">Nuevo</button>
+    <button class="header-button" id="sucursales" onclick="postVehiculo('editVehiculo')"><img class="header-icon" src="images/pen-solid.svg">Editar</button>
+    <button class="header-button" id="sucursales" onclick="postVehiculo('deleteVehiculo')"><img class="header-icon" src="images/trash-can-solid.svg">Eliminar</button>
+    <button class="header-button" id="sucursales" onclick="populateTable('Vehiculos')"><img class="header-icon" src="images/arrows-rotate-solid.svg">Actualizar</button>
+  </div>
+</section>
+<section class="mapa-info">
+  <div class="row flex-grow-1">
+    <div class="col">
+      <div class="table-wrapper">
+        <table id="table" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th data-field="id" scope="col">ID</th>
+              <th data-field="placa" scope="col">Placa</th>
+              <th data-field="marca" scope="col">Marca</th>
+              <th data-field="linea" scope="col">Linea</th>
+              <th data-field="modelo" scope="col">Modelo</th>
+              <th data-field="kilometraje" scope="col">Kilometraje</th>
+            </tr>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

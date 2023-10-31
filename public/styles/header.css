@@ -1,0 +1,45 @@
+.header{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(99, 99, 99);
+}
+.header-button{
+  height: 75px;
+  border: none;
+  background-color: rgb(99, 99, 99);
+  color: white;
+  width: 80px;
+  
+}
+.header-button:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.header-icon{
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.left-section{
+  display: flex;
+  justify-content: center;
+}
+.middle-section{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  flex: 1;
+  height: 75px;
+}
+.right-section{
+  display: flex;
+  justify-content: center;
+}
